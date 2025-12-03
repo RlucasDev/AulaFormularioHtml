@@ -3,10 +3,17 @@
   padding: 0;
   border: 0;
   outline: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Axiforma", sans-serif;
   box-sizing: border-box;
   text-decoration: none;
 }
+
+@font-face {
+  font-family: "Axiforma";
+  src: url(../assets/fonnts.com-Axiforma_Regular.ttf);
+}
+
+
 
 :root {
   --bg-primary:#041643;
@@ -18,20 +25,36 @@
   --dark-gray:#696969;
   --gray:#4E4E4E;
   --light-gray:#AFAFAF;
+  --lighter-gray: #d7d7d7;
 }
 
 body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: var(--bg-primary);
   background-image: url(../assets/gradient\ 2-03\ 1.svg);
   background-repeat: no-repeat;
-  background-size:48%;
-  padding: 91px 123px;
+  background-size: 105vh;
+  padding: 91px 123px 30px;
   height: 100vh;
 }
 
-.div-intro{
-  margin-top: 100px; 
+section {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 100px;
+  align-items: stretch;
 }
+
+.div-intro{
+  flex: 1;
+  padding: 50px 30px;
+  width: 343.33px;
+}
+
 .div-intro > h1 {
   width: 12ch;
   color: #fff;
@@ -42,25 +65,41 @@ body{
 }
 
 form{
+  border-radius: 10px;
+  flex: 1;
   background-color: var(--color-white);
   width: 343.33px;
   padding: 50px 30px;
 }
 
-form label{
+form label, form input{
   font-size: 8px;
+  color: var(--dark-gray);
 }
 
 form input{
   width: 100%;
+  border: 1px solid var(--lighter-gray);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 24px;
+}
+form input ::placeholder{
+  color: var(--lighter-gray);
 }
 
-.link-cadrastro{
+.div-link-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-cadastro{
   font-size: 10px;
   color: var(--gray);
 }
 
-.link-cadrastro a{
+.link-cadastro a{
   color: black;
   font-family: 600;
   color: var(--gray);
@@ -78,4 +117,5 @@ button{
 }
 footer > p {
   color: var(--color-white);
+  text-align: center;
 }
