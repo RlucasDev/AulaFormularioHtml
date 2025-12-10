@@ -18,6 +18,7 @@
 :root {
   --bg-primary:#041643;
   --color-primary:#1352F1;
+  --color-secondary:#1352f1b6;
   --color-white:#fff;
 
   /* gradiente de cores*/
@@ -68,7 +69,8 @@ form{
   border-radius: 10px;
   flex: 1;
   background-color: var(--color-white);
-  width: 343.33px;
+  max-width: 500px;
+  min-width: 500px;
   padding: 50px 30px;
 }
 
@@ -86,6 +88,14 @@ form input{
 }
 form input ::placeholder{
   color: var(--lighter-gray);
+}
+
+form input:focus {
+  border: var(--bg-primary);
+}
+
+form input::placeholder{
+  color: var(--dark-gray);
 }
 
 .div-link-btn {
@@ -112,10 +122,21 @@ h1, p{
 button{
   background-color: var(--color-primary);
   color: var(--color-white);
- padding: 10px 35px;
- border-radius: 5px;
- font-size: 9px;
+  padding: 10px 50px;
+  border-radius: 5px;
+  font-size: 9px;
 }
+button:hover {
+  background-color:var(--bg-primary);
+  cursor: pointer;
+}
+
+button:active {
+  background-color: var(--color-primary);
+  transform: translateY(2px);
+  transition-duration: 0.5s;
+}
+
 footer > p {
   color: var(--color-white);
   text-align: center;
